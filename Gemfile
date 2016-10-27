@@ -20,6 +20,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 
 gem 'htmlbeautifier'
+gem 'bootstrap-sass'
+gem 'sprockets'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
