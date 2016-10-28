@@ -22,6 +22,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'htmlbeautifier'
 gem 'bootstrap-sass'
 gem 'sprockets'
+gem 'bcrypt-ruby'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
