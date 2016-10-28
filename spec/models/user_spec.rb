@@ -59,6 +59,16 @@ RSpec.describe User, type: :model do
     it {should_not be_valid}
   end
 
+  describe "when user enters up case email" do
+    let(:up_case_email) {'Foo@Bar.CoM'}
+    it "should be saved with all lower case" do
+      @user.email = up_case_email
+      @user.save
+
+      expect(@user.email).to eq up_case_email.downcase
+    end
+  end
+
   describe "when password is not present" do
     before do
       @user = User.new(name: "Example User", email: "user@example.com",
