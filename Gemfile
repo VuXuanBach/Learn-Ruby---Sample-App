@@ -43,6 +43,8 @@ group :test do
   gem 'selenium-webdriver', '2.35.1'
   gem 'capybara', '2.2.0'
   gem 'factory_girl_rails'
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner', github: 'bmabey/database_cleaner'
 end
 
 # bundle exec rake doc:rails generates the API under doc/api.
