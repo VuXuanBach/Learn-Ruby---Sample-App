@@ -39,7 +39,7 @@ RSpec.describe User, type: :model do
     end
   end
 
-  describe "when email is invalid" do
+  describe "when email is valid" do
     it "should be valid" do
       email_addresses = %w[user@foo.COM A_US-ER@f.b.org frst.lst@foo.jp a+b@baz.cn]
       email_addresses.each do |valid_email|
