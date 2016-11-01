@@ -63,13 +63,27 @@ RSpec.describe "AuthenticationPages", type: :request do
             it "should render the desired protected page" do
               expect(page).to have_content('Update your profile')
             end
+
+            describe "when signing in again" do
+              before do
+                click_link "Sign out"
+                visit signin_path
+                fill_in "Email",    with: user.email
+                fill_in "Password", with: user.password
+                click_button "Sign in"
+              end
+
+              it "should render the default (profile) page" do
+                expect(page).to have_title(user.name)
+              end
+            end
           end
         end
       end
 
       describe "visiting the user index" do
         before { visit users_path }
-        it { should have_title('Sign in') }
+        it { should have_content('sign in') }
       end
 
       describe "as non-admin user" do
