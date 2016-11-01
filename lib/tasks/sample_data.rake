@@ -6,6 +6,11 @@ namespace :db do
                          password: "foobar",
                          password_confirmation: "foobar",
                          admin: true)
+    User.create!(name: "Bach Vu 2",
+                         email: "bach.vu+2@eastagile.com",
+                         password: "foobar",
+                         password_confirmation: "foobar",
+                         admin: true)
     User.create!(name: "Example User",
                  email: "example@railstutorial.org",
                  password: "foobar",
