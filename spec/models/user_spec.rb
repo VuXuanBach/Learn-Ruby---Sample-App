@@ -14,6 +14,7 @@ RSpec.describe User, type: :model do
   it {should respond_to(:remember_token)}
   it {should respond_to(:authenticate)}
   it {should respond_to(:admin)}
+  it {should respond_to(:microposts)}
   it {should be_valid}
 
   describe "when name is not presence" do
